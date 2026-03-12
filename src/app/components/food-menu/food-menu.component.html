@@ -1,0 +1,24 @@
+<section id="food" class="section-pad">
+  <div class="container">
+    <header class="menu-header" appRevealOnScroll>
+      <h2 class="display-title">Кухня</h2>
+      <p class="subtitle">Салаты, горячие блюда, паста и мангал.</p>
+    </header>
+
+    <div class="grid">
+      @for (f of foods; track f.name) {
+        <article class="food glass" appRevealOnScroll>
+          <div class="ribbon">{{ f.type }}</div>
+          <div class="thumb">
+            <img [src]="f.image" [alt]="f.name" loading="lazy" />
+          </div>
+          <div class="content">
+            <h3>{{ f.name }}</h3>
+            <p class="muted">{{ f.description }}</p>
+          </div>
+          <div class="price">{{ f.price | number }}</div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

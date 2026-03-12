@@ -1,0 +1,16 @@
+<section id="gallery" class="section-pad">
+  <div class="container">
+    <header class="menu-header" appRevealOnScroll>
+      <h2 class="display-title">Lounge Interior</h2>
+      <p class="subtitle">A modern sanctuary with premium comfort.</p>
+    </header>
+
+    <div class="gallery-grid">
+      @for (img of images; track img) {
+        <figure class="gallery-item glass" appRevealOnScroll>
+          <img [src]="img" alt="Lounge interior photo" />
+        </figure>
+      }
+    </div>
+  </div>
+</section>

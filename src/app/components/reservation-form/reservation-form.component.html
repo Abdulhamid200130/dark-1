@@ -1,0 +1,38 @@
+<section id="reservation" class="section-pad">
+  <div class="container">
+    <header class="menu-header" appRevealOnScroll>
+      <h2 class="display-title">Reserve Your Table</h2>
+      <p class="subtitle">Book an evening in our premium lounge.</p>
+    </header>
+
+    <form class="form glass" [formGroup]="form" (ngSubmit)="submit()" appRevealOnScroll novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" placeholder="Your full name" />
+        <small class="error" *ngIf="f.name.touched && f.name.invalid">Please enter a valid name.</small>
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" formControlName="phone" placeholder="+1 (555) 123-4567" />
+        <small class="error" *ngIf="f.phone.touched && f.phone.invalid">Enter a valid phone number.</small>
+      </div>
+
+      <div class="field">
+        <label for="date">Date</label>
+        <input id="date" type="date" formControlName="date" />
+        <small class="error" *ngIf="f.date.touched && f.date.invalid">Choose a date.</small>
+      </div>
+
+      <div class="field">
+        <label for="time">Time</label>
+        <input id="time" type="time" formControlName="time" />
+        <small class="error" *ngIf="f.time.touched && f.time.invalid">Choose a time.</small>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>

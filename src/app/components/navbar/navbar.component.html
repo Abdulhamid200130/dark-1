@@ -1,0 +1,18 @@
+<nav class="navbar glass" [class.scrolled]="isScrolled()">
+  <div class="container nav-inner">
+    <a class="brand" href="#hero" (click)="closeMobile()">DARKSIDE</a>
+
+    <button class="menu-btn" (click)="toggleMobile()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="links" [class.open]="mobileOpen()">
+      <li><a href="#hookah-menu" (click)="closeMobile()">Hookah</a></li>
+      <li><a href="#drinks" (click)="closeMobile()">Бар</a></li>
+      <li><a href="#food" (click)="closeMobile()">Кухня</a></li>
+      <li><a href="#gallery" (click)="closeMobile()">Interior</a></li>
+      <li><a href="#reservation" (click)="closeMobile()">Reserve</a></li>
+      <li><a href="#contact" (click)="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+</nav>

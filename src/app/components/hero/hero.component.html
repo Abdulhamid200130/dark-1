@@ -1,0 +1,71 @@
+<section id="hero" class="hero">
+  <div class="overlay"></div>
+  <div class="container hero-inner">
+    <div class="titles" appRevealOnScroll>
+      <h1 class="display-title">Premium Hookah Lounge</h1>
+      <p class="subtitle">Experience refined flavors, ambient beats, and luxury comfort.</p>
+      <a class="btn" href="#hookah-menu">View Menu</a>
+    </div>
+  </div>
+  <div class="smoke-glow" aria-hidden="true"></div>
+  <div class="smoke-field bg" aria-hidden="true" [style.--mx.px]="mouseParallaxX">
+    @for (p of bgParticles; track p) {
+      <span
+        class="smoke-particle"
+        [ngStyle]="{
+          '--size': p.size + 'px',
+          '--delay': p.delay + 's',
+          '--duration': p.duration + 's',
+          '--left': p.left + '%',
+          '--blur': p.blur + 'px',
+          '--opacity': p.opacity,
+          '--tx0': 'calc(-50% + ' + p.tx0 + 'px)',
+          '--tx1': 'calc(-50% + ' + p.tx1 + 'px)',
+          '--tx2': 'calc(-50% + ' + p.tx2 + 'px)',
+          '--tx3': 'calc(-50% + ' + p.tx3 + 'px)',
+          '--tx4': 'calc(-50% + ' + p.tx4 + 'px)'
+        }"
+      ></span>
+    }
+  </div>
+  <div class="smoke-field mid" aria-hidden="true" [style.--mx.px]="mouseParallaxX">
+    @for (p of midParticles; track p) {
+      <span
+        class="smoke-particle"
+        [ngStyle]="{
+          '--size': p.size + 'px',
+          '--delay': p.delay + 's',
+          '--duration': p.duration + 's',
+          '--left': p.left + '%',
+          '--blur': p.blur + 'px',
+          '--opacity': p.opacity,
+          '--tx0': 'calc(-50% + ' + p.tx0 + 'px)',
+          '--tx1': 'calc(-50% + ' + p.tx1 + 'px)',
+          '--tx2': 'calc(-50% + ' + p.tx2 + 'px)',
+          '--tx3': 'calc(-50% + ' + p.tx3 + 'px)',
+          '--tx4': 'calc(-50% + ' + p.tx4 + 'px)'
+        }"
+      ></span>
+    }
+  </div>
+  <div class="smoke-field fg" aria-hidden="true" [style.--mx.px]="mouseParallaxX">
+    @for (p of fgParticles; track p) {
+      <span
+        class="smoke-particle"
+        [ngStyle]="{
+          '--size': p.size + 'px',
+          '--delay': p.delay + 's',
+          '--duration': p.duration + 's',
+          '--left': p.left + '%',
+          '--blur': p.blur + 'px',
+          '--opacity': p.opacity,
+          '--tx0': 'calc(-50% + ' + p.tx0 + 'px)',
+          '--tx1': 'calc(-50% + ' + p.tx1 + 'px)',
+          '--tx2': 'calc(-50% + ' + p.tx2 + 'px)',
+          '--tx3': 'calc(-50% + ' + p.tx3 + 'px)',
+          '--tx4': 'calc(-50% + ' + p.tx4 + 'px)'
+        }"
+      ></span>
+    }
+  </div>
+</section>

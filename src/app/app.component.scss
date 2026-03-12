@@ -1,0 +1,32 @@
+ .loader {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(80% 70% at 50% 40%, rgba(207,162,90,0.08), rgba(0,0,0,0) 60%) , var(--bg);
+  z-index: 2000;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader-inner {
+  position: relative;
+  width: min(520px, 90vw);
+  padding: 36px 26px 80px;
+  text-align: center;
+}
+.loader .title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  color: var(--gold);
+  letter-spacing: 4px;
+}
+.loader .subtitle {
+  color: var(--muted);
+  margin-top: 6px;
+}
+.loader .smoke {
+  bottom: -20px;
+}

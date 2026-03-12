@@ -1,0 +1,32 @@
+<section id="hookah-menu" class="section-pad">
+  <div class="container">
+    <header class="menu-header" appRevealOnScroll>
+      <h2 class="display-title">Кальянное меню</h2>
+      <p class="subtitle">Выберите категорию и найдите свой вкус.</p>
+      <div class="chips">
+        @for (cat of categories; track cat) {
+          <button class="chip" [class.active]="selected() === cat" (click)="select(cat)">{{ cat }}</button>
+        }
+      </div>
+    </header>
+
+    <div class="grid">
+      @for (item of filtered(); track item.name) {
+        <article class="card glass" appRevealOnScroll>
+          <div class="thumb">
+            <img [src]="item.image" [alt]="item.name" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="badge">{{ item.category }}</span>
+              <span class="price">{{ item.price | number }}</span>
+            </div>
+            <h3>{{ item.name }}</h3>
+            <p class="muted">{{ item.description }}</p>
+          </div>
+          <span class="hover-smoke"></span>
+        </article>
+      }
+    </div>
+  </div>
+</section>
