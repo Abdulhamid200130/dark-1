@@ -2,8 +2,9 @@
   "version": 2,
   "framework": "angular",
   "buildCommand": "npm run build",
-  "outputDirectory": "dist/hookah-lounge",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+  "outputDirectory": "dist/hookah-lounge/browser",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
